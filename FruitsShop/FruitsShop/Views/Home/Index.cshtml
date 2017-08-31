@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Fruit Shop Home";
+}
+<div ng-controller="MainController as mainCtrl">
+    <h2>Welcome to Fruits Shop!!</h2>
+    <div>
+        <div class="products">
+            <h3>Apples</h3>
+            <img src="~/Content/img/apple.jpg" class="product_image" />
+            <button ng-click="mainCtrl.getProductDeatailsById(1)">Product Details</button>
+        </div>
+
+        <div class="products">
+            <h3>Oranges</h3>
+            <img src="~/Content/img/orange.jpg" class="product_image" />
+            <button ng-click="mainCtrl.getProductDeatailsById(2)">Product Details</button>
+        </div>
+    </div>
+    <div ng-if="mainCtrl.isProductDetailsEnabled">
+        <product-details product-id="mainCtrl.productId"></product-details>
+    </div>
+</div>
