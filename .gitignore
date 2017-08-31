@@ -2,3 +2,5 @@
 /FruitsShop/Web/bin/
 /FruitsShop/Web/obj/
 /FruitsShop/packages/
+/FruitsShop/Web/Scripts/app/**/*.js
+/FruitsShop/Web/Scripts/app/**/*.js.map
