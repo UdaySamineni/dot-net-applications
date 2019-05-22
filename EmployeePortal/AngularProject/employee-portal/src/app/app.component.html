@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>Welcome to {{ title }}!</h3>
+</div>
+
+<nav>
+  <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"
+    >Dashboard</a
+  ><br />
+  <a [routerLink]="['/employees']" routerLinkActive="router-link-active"
+    >Employess</a
+  >
+  <br />
+  <a [routerLink]="['/managers']" routerLinkActive="router-link-active"
+    >Managers</a
+  >
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,26 @@
+<p>
+  manager-details works!
+</p>
+<div>
+  <button kendoButton (click)="saveManager()">Save</button>
+  <button kendoButton>Delete</button>
+</div>
+
+<form [formGroup]="form">
+  <label>
+    <span>Name</span>
+    <input formControlName="Name" />
+  </label>
+  <label>
+    <span>Senior Manger</span>
+    <kendo-dropdownlist
+      [data]="managers"
+      [defaultItem]="{ ID: null, Name: 'Select Senior Manager' }"
+      [valueField]="'ID'"
+      [textField]="'Name'"
+      formControlName="SeniorManagerID"
+      [valuePrimitive]="true"
+    ></kendo-dropdownlist>
+  </label>
+  <app-employees [managerID]="managerID"></app-employees>
+</form>

@@ -1,0 +1,19 @@
+<p>
+  employees works!
+</p>
+<div>
+  <button kendoButton (click)="addNewEmployee()">Add New</button>
+</div>
+<kendo-grid [data]="formData">
+  <kendo-grid-column>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button kendoButton (click)="editEmployee(dataItem)">Edit</button>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="ID" title="Id"></kendo-grid-column>
+  <kendo-grid-column field="Name" title="Name"></kendo-grid-column>
+  <kendo-grid-column
+    field="Manager.Name"
+    title="Manager Name"
+  ></kendo-grid-column>
+</kendo-grid>

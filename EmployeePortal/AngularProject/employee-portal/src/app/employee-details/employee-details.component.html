@@ -1,0 +1,36 @@
+<form [formGroup]="form">
+  <div>
+    <label>
+      <span>
+        Employee Name
+      </span>
+      <input formControlName="Name" />
+    </label>
+    <label>
+      <span>Manager Name</span>
+      <kendo-dropdownlist
+        [data]="managers"
+        [defaultItem]="{ ID: null, Name: 'Select Manager' }"
+        [textField]="'Name'"
+        [valueField]="'ID'"
+        formControlName="ManagerID"
+        [valuePrimitive]="true"
+      ></kendo-dropdownlist>
+    </label>
+  </div>
+
+  <div>
+    <button kendoButton (click)="saveEmployee()">Save</button>
+    <button kendoButton (click)="isDialogOpen = true">Delete</button>
+  </div>
+</form>
+
+<kendo-dialog [width]="400" [height]="150" (close)="closeDialog()" title="Please conform" *ngIf="isDialogOpen">
+  <div>
+    <span>Are you sure?</span>
+  </div>
+  <kendo-dialog-actions>
+    <button kendoButton (click)="closeDialog()">No</button>
+    <button kendoButton (click)="deleteEmployee()">Yes</button>
+  </kendo-dialog-actions>
+</kendo-dialog>

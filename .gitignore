@@ -1,6 +1,6 @@
-/FruitsShop/.vs/
-/FruitsShop/Web/bin/
-/FruitsShop/Web/obj/
-/FruitsShop/packages/
-/FruitsShop/Web/Scripts/app/**/*.js
-/FruitsShop/Web/Scripts/app/**/*.js.map
+/**/.vs/
+/**/**/bin/
+/**/**/obj/
+/**/packages/
+/**/**/Scripts/app/**/*.js
+/**/**/Scripts/app/**/*.js.map

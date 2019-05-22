@@ -1,0 +1,18 @@
+<p>
+  managers works!
+</p>
+<div>
+  <button kendoButton (click)="addManager()">
+    Add Manager
+  </button>
+</div>
+<kendo-grid [data]="managers">
+  <kendo-grid-column>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button (click)="getManagerDetails(dataItem)">Edit</button>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="ID" title="ID"></kendo-grid-column>
+  <kendo-grid-column field="Name" title="Manager Name"></kendo-grid-column>
+  <kendo-grid-column field="Manager2.Name" title="Senior Manager"></kendo-grid-column>
+</kendo-grid>
