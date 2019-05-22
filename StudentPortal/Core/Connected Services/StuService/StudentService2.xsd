@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Core.Domain.Student" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Core.Domain.Student" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:63893/StudentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Core.Domain.Teacher" />
+  <xs:complexType name="StudentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RollNo" nillable="true" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Core.Domain.Teacher" minOccurs="0" name="Teacher" nillable="true" type="q1:TeacherDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentDto" nillable="true" type="tns:StudentDto" />
+</xs:schema>

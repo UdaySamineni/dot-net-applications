@@ -1,0 +1,42 @@
+﻿@model Core.Domain.Student.StudentDto
+
+@{
+    ViewBag.Title = "GetStudentDetails";
+}
+
+<h2>GetStudentDetails</h2>
+
+<div>
+    <h4>StudentDto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RollNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RollNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RollNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

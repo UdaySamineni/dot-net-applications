@@ -1,0 +1,37 @@
+<form [formGroup]="form">
+    <div style="text-align:center">
+      <h3>Welcome to {{ title }}!</h3>
+
+      <label>Student Search</label>
+      <input [(ngModel)]="studentID" [ngModelOptions]="{ standalone: true }" />
+      <button (click)="getStudentDetailsBySearch()">Search</button>
+      <div>
+        <Label>
+          <span>First Name</span>
+          <div>{{ student.FirstName }}</div>
+        </Label>
+        <Label>
+          <span>Last Name</span>
+          <div>{{ student.LastName }}</div>
+        </Label>
+      </div>
+    </div>
+
+    <kendo-grid [data]="studentList" [height]="410">
+      <kendo-grid-column>
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <nav>
+            <a
+              routerLink="/student-details/{{ dataItem.ID }}"
+              routerLinkActive="router-link-active"
+              >Edit</a
+            >
+          </nav>
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="FirstName" title="First Name" width="40">
+      </kendo-grid-column>
+      <kendo-grid-column field="LastName" title="Last Name" width="40">
+      </kendo-grid-column>
+    </kendo-grid>
+  </form>
