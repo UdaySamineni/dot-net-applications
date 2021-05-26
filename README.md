@@ -1,2 +1,2 @@
-# sample-apps
-This repository contains different sample applications. 
+# .NET Applications
+The repository contains sample .NET Applications. 
